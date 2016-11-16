@@ -29,7 +29,7 @@ def mouse_callback(event, x, y, flags, params):
 
 # --------
 # | Main |
-# --------
+# --------	
 
 # Variables
 frame_filename = 'screenshot-{}.jpg'
@@ -85,6 +85,12 @@ while True:
 		filename = os.path.join(output_folder, filename)
 		os.makedirs(os.path.dirname(filename), exist_ok=True)
 		cv2.imwrite(filename, roi)
+
+		# Save source file if not saved yet
+		frame_save_fn = os.path.join('output/', os.path.basename(video_filename))
+		frame_save_fn = os.path.join(frame_save_fn, my_filename)
+		if not os.path.exists(frame_save_fn):
+			cv2.imwrite(frame_save_fn, clone)
 		
 		pic_id += 1
 
@@ -95,6 +101,12 @@ while True:
 		filename = os.path.join(output_folder, filename)
 		os.makedirs(os.path.dirname(filename), exist_ok=True)
 		cv2.imwrite(filename, roi)
+
+		# Save source file if not saved yet
+		frame_save_fn = os.path.join('output/', os.path.basename(video_filename))
+		frame_save_fn = os.path.join(frame_save_fn, my_filename)
+		if not os.path.exists(frame_save_fn):
+			cv2.imwrite(frame_save_fn, clone)
 		
 		pic_id += 1
 
@@ -105,6 +117,12 @@ while True:
 		filename = os.path.join(output_folder, filename)
 		os.makedirs(os.path.dirname(filename), exist_ok=True)
 		cv2.imwrite(filename, roi)
+
+		# Save source file if not saved yet
+		frame_save_fn = os.path.join('output/', os.path.basename(video_filename))
+		frame_save_fn = os.path.join(frame_save_fn, my_filename)
+		if not os.path.exists(frame_save_fn):
+			cv2.imwrite(frame_save_fn, clone)
 		
 		pic_id += 1
 
